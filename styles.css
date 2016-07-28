@@ -1,0 +1,153 @@
+/*css document*/
+body{
+    margin: 0;
+}
+
+.sky{
+    background: linear-gradient(to bottom, #3b679e 0%,#7db9e8 63%,#7db9e8 100%);
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.land{
+    background: linear-gradient(to bottom, #b4e391 1%,#61c419 100%,#61c419 100%);
+    width: 100%;
+    height: 171px;
+}
+
+#mouse img{
+    width: 50px;
+    position: relative;
+    top: 428px;
+    left: 250px;
+    animation-name: mouse;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes mouse{
+    from{
+        left: 250;
+        transform: scaleX(1);
+    }
+    49%{
+        left: 0;
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(-1);
+    }
+    99%{
+        left: 250;
+        transform: scaleX(-1);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+#tree img{
+    position: relative;
+    top: 253px;
+    left: 320px;
+}
+
+#merlin img{
+    position: relative;
+    top: 143px;
+    left: 444px;
+}
+
+#hippo img{
+    position: absolute;
+    top: 222px;
+    left: 810px;
+    animation-name: hippo;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+    transform: scale(1);
+}
+
+#drop img{
+    width: 25px; 
+    position: absolute;
+    top: 344px;
+    left: 510px;
+    opacity: 0;
+    animation-name: small;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+#star img{
+    width: 20px; 
+    position: absolute;
+    top: 344px;
+    left: 510px;
+    opacity: 0;
+    animation-name: big;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes small{
+    from{
+        left: 510px;
+        opacity: 1;
+    }
+    35%{
+        left: 788px;
+        opacity: 1;
+    }
+    36%{
+        opacity: 0;
+    }
+}
+
+@keyframes big{
+    49%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        left: 510px;
+        transform: rotate(0deg);
+    }
+    65%{
+        transform: rotate(360deg)
+    }
+    66%{
+        transform: rotate(1deg);
+    }
+    85%{
+        opacity: 1;
+        left: 880px;
+        transform: rotate(360deg);
+    }
+    86%{
+        opacity: 0;
+    }
+}
+
+@keyframes hippo{
+    35%{
+        transform: scale(1);
+        top: 222px;
+    }
+    50%{
+        transform:scale(0.5);
+        top: 278px;
+    }
+    85%{
+        transform: scale(0.5);
+        top: 278px;
+    }
+    to{
+        transform: scale(1);
+        top: 222px;
+    }
+}
